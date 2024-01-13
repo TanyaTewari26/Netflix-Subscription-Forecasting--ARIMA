@@ -13,3 +13,26 @@ So the process for forecasting subscriptions for Netflix starts with collecting 
 
 Based on the dataset, plotting the quarterly subscription growth of Netflix
 ![png](./Plot1.png)
+
+Since the Netflix subscribers growth is not seasonal, we can leverage forecasting technique like ARIMA in this dataset.
+
+We calculate the quarterly growth rate using bar graph and plot quarterly subscription growth rate
+![png](./Plot2.png)
+
+Now, we calculate the yearly subsciption growth rate using bar graphs
+
+![png](./Plot3.png)
+
+Now we find the value of p and q by plotting the ACF and PACF of differenced time series
+
+![png](./Plot5.png)
+
+Here we first calculated the differenced time series from the original time_series, removed any NaN values resulting from the differencing, and then plotted the ACF and PACF to provide insights into the potential order of the AR and MA components in the time series. These plots are useful for determining the appropriate parameters when using the ARIMA model for time series forecasting.
+
+Based on the plots, we find that p=1 and q=1. The ACF plot cuts off at lag 1, indicating q=1, and the PACF plot also cuts off at lag 1, indicating p=1. As there is a linear trend in the subscription growth rate, we can set the value of d as 1 to remove the linear trend, making the time series stationary.
+
+And implement the ARIMA model in our dataset-
+
+Visualizing the results of Netflix Subscriptions Forecasting for the next five quarters:
+
+![png](./Plot4.png)
