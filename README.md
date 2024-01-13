@@ -43,6 +43,7 @@ ARIMA models have three key parameters:
 1. The order of autoregression- p
 2. The degree of differencing- d
 3. The order of the moving average- q
+
 Selecting the optimal combination is essential for effective forecasting.
 
 Determining the appropriate values for p and q requires examining the autocorrelation function (ACF) and partial autocorrelation function (PACF) plots of the time series data. The ACF plot displays the correlation between an observation and its lagged values, while the PACF plot shows the direct effect of lagged values on the current observation, removing any indirect effects. A sharp cut-off in the PACF plot suggests the optimal p value, while a gradual decline indicates the ideal value for q.
