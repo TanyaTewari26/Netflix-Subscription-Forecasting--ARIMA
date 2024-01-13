@@ -45,9 +45,6 @@ Determining the appropriate values for p and q requires examining the autocorrel
 
 For the differencing parameter d, start with a value of 0 or 1, then incrementally increase it until the time series is stationary. However, the excessive differencing can lead to overfitting and reduced forecasting accuracy.
 
-### Fitting ARIMA models
-Once you’ve determined the optimal (p, d, q) parameters, fit your ARIMA model to the training set using statistical software or programming languages like Python or R. While fitting the model, pay close attention to its residuals, as they provide crucial information about the model’s performance. Ideally, the residuals should be white noise, indicating that the model has captured the underlying structure of the data.
-
 Now we find the value of p and q by plotting the ACF and PACF of differenced time series.
 
 ![png](./Plot5.png)
@@ -56,7 +53,10 @@ Here we first calculated the differenced time series from the original time_seri
 
 Based on the plots, we find that p=1 and q=1. The ACF plot cuts off at lag 1, indicating q=1, and the PACF plot also cuts off at lag 1, indicating p=1. As there is a linear trend in the subscription growth rate, we can set the value of d as 1 to remove the linear trend, making the time series stationary.
 
-And implement the ARIMA model in our dataset-
+### Fitting ARIMA models
+Once we’ve determined the optimal (p, d, q) parameters, fit your ARIMA model to the training set using statistical software or programming languages like Python or R. While fitting the model, pay close attention to its residuals, as they provide crucial information about the model’s performance. Ideally, the residuals should be white noise, indicating that the model has captured the underlying structure of the data.
+
+And now we implement the ARIMA model in our dataset-
 
 Visualizing the results of Netflix Subscriptions Forecasting for the next five quarters:
 
