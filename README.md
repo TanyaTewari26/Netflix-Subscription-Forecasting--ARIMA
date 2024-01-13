@@ -31,7 +31,7 @@ Stationarity, as modified with differences, is a crucial aspect of ARIMA modelin
 
 ARIMA models are designed for stationary data, so ensuring your time series is stationary is essential to the modeling process. Differencing, as mentioned above, is often used to achieve stationarity by removing trends or seasonal patterns. The amount of differencing required is determined by the data itself and plays a key role in the overall performance of the model.
 
-We calculate the quarterly growth rate using bar graph and plot quarterly subscription growth rate
+First, we calculate the quarterly growth rate using bar graph and plot quarterly subscription growth rate
 ![png](./Plot2.png)
 
 Now, we calculate the yearly subsciption growth rate using bar graphs
@@ -45,7 +45,7 @@ Determining the appropriate values for p and q requires examining the autocorrel
 
 For the differencing parameter d, start with a value of 0 or 1, then incrementally increase it until the time series is stationary. However, the excessive differencing can lead to overfitting and reduced forecasting accuracy.
 
-Now we find the value of p and q by plotting the ACF and PACF of differenced time series.
+Now, we find the value of p and q by plotting the ACF and PACF of differenced time series.
 
 ![png](./Plot5.png)
 
