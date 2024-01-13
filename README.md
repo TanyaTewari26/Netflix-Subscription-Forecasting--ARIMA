@@ -12,4 +12,4 @@ Using techniques like time series forecasting, Netflix can predict the expected 
 So the process for forecasting subscriptions for Netflix starts with collecting a dataset based on the historical growth of Netflix Subscribers. Dataset consists of Netflix subscriptions till Q3-2023.
 
 Based on the dataset, plotting the quarterly subscription growth of Netflix
-!
+![png](./Plot1.png)
